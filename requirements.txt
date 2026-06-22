@@ -13,3 +13,5 @@ chromadb
 sentence-transformers
 
 youtube-transcript-api
+torch
+torchvision
