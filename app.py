@@ -47,9 +47,6 @@ def get_transcript(video_id):
 # ==========================
 def create_vector_db(text):
 
-    from langchain_chroma import Chroma
-    from langchain_huggingface import HuggingFaceEmbeddings
-
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200
