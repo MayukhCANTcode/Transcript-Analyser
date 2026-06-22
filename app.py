@@ -2,8 +2,6 @@ from dotenv import load_dotenv
 from youtube_transcript_api import YouTubeTranscriptApi
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_chroma import Chroma
 
 
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -50,6 +48,8 @@ def get_transcript(video_id):
 # CREATE VECTOR DB
 # ==========================
 def create_vector_db(text):
+    from langchain_chroma import Chroma
+    from langchain_huggingface import HuggingFaceEmbeddings
 
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
