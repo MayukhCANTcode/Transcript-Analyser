@@ -1,5 +1,3 @@
-import streamlit as st
-
 from app import (
     extract_video_id,
     get_transcript,
@@ -11,6 +9,15 @@ from app import (
     generate_quiz,
     generate_flashcards
 )
+import os
+import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
+
+if "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+
 
 st.set_page_config(
     page_title="YouTube Chatbot",
@@ -169,3 +176,11 @@ if st.session_state.retriever is not None:
                 st.markdown("## 🧠 Flashcards")
 
                 st.write(result)
+
+
+@st.cache_resource
+def get_llm():
+    return load_llm()
+
+
+llm = get_llm()
