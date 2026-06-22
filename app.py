@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from youtube_transcript_api import YouTubeTranscriptApi
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+import os
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
