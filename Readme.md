@@ -1,3 +1,6 @@
+🔗 Live Demo:
+https://transcript-analyser-ssnugb7ubkuzwf2q94hqu3.streamlit.app/
+
 # YouTube RAG Chatbot
 
 A Retrieval-Augmented Generation (RAG) application that allows users to chat with YouTube videos using AI.
