@@ -1,4 +1,6 @@
-streamlit
+streamlit==1.39.0
+protobuf==5.29.5
+
 python-dotenv
 
 langchain
@@ -12,5 +14,3 @@ langchain-text-splitters
 chromadb
 sentence-transformers
 youtube-transcript-api
-
-protobuf==4.25.3
