@@ -15,6 +15,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+if "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 st.set_page_config(
     page_title="YouTube Chatbot",
